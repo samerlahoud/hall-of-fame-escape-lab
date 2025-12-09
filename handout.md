@@ -1,7 +1,7 @@
 # CSCI 4178 – Cyber Escape: Hall of Fame Edition
 
-**Time**: 1 hour 20 minutes
-**Teams**: 3 students per team
+**Time**: 1 hour
+**Teams**: 3 students per team (flexible)
 
 ---
 
