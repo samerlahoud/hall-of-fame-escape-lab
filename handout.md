@@ -19,7 +19,7 @@ Inside this system there are three serious weaknesses, each at a different layer
 
 * The **database layer**
 * The **browser layer**
-* The **system layer** (operating system level)
+* The **system layer**
 
 Your mission is to discover **three “keys”**:
 
@@ -37,7 +37,7 @@ You will run a small vulnerable lab environment inside Docker on your own laptop
 
 ### Step 1 – Get the lab files
 
-You will receive a folder or zip archive named for example:
+You will clone or download the repository from https://github.com/samerlahoud/hall-of-fame-escape-lab including the following files:
 
 ```text
 hall-of-fame-escape-lab/
@@ -50,7 +50,7 @@ hall-of-fame-escape-lab/
     └── system_secret.txt
 ```
 
-Download or unzip this folder and open a terminal inside it. For example:
+Open a terminal inside the downloaded folder. For example:
 
 ```bash
 cd ~/Downloads/hall-of-fame-escape-lab
@@ -116,7 +116,7 @@ Your goal for the **Database Key** is to show that you can use the application t
 * Seeing grades for another student while logged in as yourself.
 * Extracting data from a table that is not meant to be visible through the interface.
 
-You will need to link this to database level vulnerabilities discussed in the course (for example misuse of string concatenation in queries) and explain how to fix the problem.
+You will need to link this to database level vulnerabilities discussed in the course and explain how to fix the problem.
 
 ---
 
@@ -134,7 +134,7 @@ Your goal for the **Browser Key** is to show that you can:
 * Inject a comment that makes the browser execute JavaScript when the comments page is loaded, and
 * Use that code to have an effect on something sensitive, for example submitting a request that changes a grade when an instructor views the page.
 
-You will need to connect this to topics such as cross site scripting and cross site request forgery style attacks, and explain how a real system should defend itself.
+Explain how a real system should defend itself.
 
 ---
 
