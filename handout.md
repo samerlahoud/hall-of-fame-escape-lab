@@ -140,64 +140,14 @@ Explain how a real system should defend itself.
 
 ### 3.3 System Key
 
-Explore the diagnostic page:
+Explore the diagnostic page linked from the home screen. It takes a host parameter and displays some output based on that value.
 
-* There is a link on the home page to a simple “ping” diagnostic endpoint.
-* It takes a `host` parameter and shows you the result of a command on the server.
+For this System Key, your team should investigate whether this feature exposes more of the underlying system than intended. Pay attention to how changes in the host parameter affect the output, and whether you can and reveal internal information from the server that should not be exposed.
 
-Your goal for the **System Key** is to show that you can use this diagnostic feature to execute operating system commands of your choice and reveal internal information from the server that should not be exposed. For example, you may try to:
-
-* List files on the server
-* Read the contents of a file under `web/` such as `system_secret.txt`
-
-You will need to connect this to command injection and unsafe use of shell commands, and explain how to write such diagnostics safely.
+In your explanation, relate your findings to course topics such as safe use of diagnostic tools, handling user controlled parameters, and separating application behaviour from underlying operating system details.
 
 ---
 
-## 4. What to record
+## 4. What to Share
 
-For each key your team finds, write down the following (brief bullet points are enough):
-
-1. **What you achieved**
-
-   * A short description of what you did and what changed or what you saw.
-   * For example, “We were logged in as Alice but saw Bob’s grades,” or “When the instructor opens the comments page, Alice’s grade is automatically changed.”
-
-2. **How you did it**
-
-   * Enough detail so that you could repeat it later.
-   * For example, a specific URL you used, an HTTP request body, or a comment payload.
-
-3. **Why it worked (course concept)**
-
-   * Which vulnerability or concept from CSCI 4178 explains the behaviour.
-   * For example, SQL injection, stored XSS, missing output encoding, command injection, missing input validation, missing CSRF protection.
-
-4. **How to fix it**
-
-   * At least one realistic countermeasure for that vulnerability.
-   * For example:
-
-     * Using parameterized queries instead of string concatenation in SQL.
-     * Escaping or sanitizing untrusted output in HTML.
-     * Adding CSRF tokens on sensitive POST requests.
-     * Avoiding shell calls with concatenated user input and using safe APIs instead.
-
----
-
-## 5. Debrief
-
-At the end of the session, each team will briefly present one or two of its findings:
-
-* Which key you obtained
-* What you did
-* Which vulnerability it demonstrates
-* How a real defender should fix or prevent it
-
-The aim of this final lab is not to have the most clever exploit, but to show that you can:
-
-* Recognise important classes of vulnerabilities
-* Turn them into concrete, observable effects
-* Reason about realistic mitigations
-
-You are encouraged to share ideas within your team and to focus on understanding and explanation.
+During the lab, your team should keep brief notes for each key: what you managed to do, how you did it (including any important input, URL, or sequence of steps), and which CSCI 4178 concepts explain why it worked. Each team will be invited to share these findings with the instructor on Teams, focusing on a clear description of the vulnerability and at least one realistic way to fix it.
