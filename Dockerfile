@@ -5,7 +5,7 @@ WORKDIR /app
 # Install system dependencies (minimal)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        ca-certificates \
+        ca-certificates iputils-ping \
     && rm -rf /var/lib/apt/lists/*
 
 # Python dependencies
